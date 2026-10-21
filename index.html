@@ -1,0 +1,203 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>مفاجأة صغيرة 🎁</title><style>
+:root{--ink:#29334a;--yellow:#ffe58a;--blue:#bfe8ff;--pink:#ffd0e3}*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink);background:linear-gradient(135deg,#fff9dd,#fffdf8 36%,#eaf8ff 70%,#fff0f7);overflow-x:hidden}button{font:inherit;cursor:pointer;border:0}main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}.screen{display:none;width:min(760px,100%);background:#fffdf8f2;border:2px solid white;border-radius:28px;padding:clamp(20px,5vw,40px);box-shadow:0 18px 55px #4c62801a;text-align:center;position:relative;overflow:hidden}.screen.active{display:block;animation:appear .3s ease}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}h1{font-size:clamp(1.7rem,5vw,2.6rem);margin:8px 0 14px;line-height:1.4}p{line-height:1.8}.sub{color:#68738a;margin:0 auto 22px;max-width:570px}.primary{background:var(--ink);color:white;border-radius:999px;padding:14px 26px;font-weight:800;box-shadow:0 6px 0 #171e30}.primary:active{transform:translateY(3px);box-shadow:0 3px 0 #171e30}.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0 22px}.pill{padding:7px 12px;border-radius:99px;font-size:.9rem;background:#fff0bd}.pill:nth-child(2){background:#dff4ff}.pill:nth-child(3){background:#ffe3ef}.topline{display:flex;justify-content:space-between;gap:12px;text-align:right;color:#69748a;font-weight:700;font-size:.92rem}.track{height:9px;background:#e8ebf2;border-radius:20px;overflow:hidden;margin:12px 0 24px}.track span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffdc72,#a9ddff,#ffb9d6);transition:width .25s}.qnumber{display:inline-block;background:#e8f6ff;padding:7px 13px;border-radius:99px;font-weight:800}.question{font-size:clamp(1.2rem,3.7vw,1.7rem);font-weight:850;line-height:1.65;margin:10px auto 18px}.pattern{direction:ltr;display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:20px auto 24px;min-height:58px}.tile{min-width:48px;min-height:48px;padding:8px;display:grid;place-items:center;border-radius:14px;background:#f0f6ff;border:2px solid #d9e8fb;font-size:clamp(1.15rem,4vw,1.75rem);font-weight:900}.tile.blank{background:#fff0bd;border-style:dashed;border-color:#e6bd45}.answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:570px;margin:0 auto}.answer{padding:14px 8px;border:2px solid #e4e9f2;border-radius:16px;background:white;font-weight:750;min-height:58px}.answer.correct{border-color:#51b887;background:#e8fff3}.answer.wrong{border-color:#ef7d90;background:#fff0f2}.feedback{min-height:32px;margin:14px 0 0;font-weight:800}.feedback.bad{color:#c4475a}.feedback.good{color:#21855a}.hint{font-size:.9rem;color:#778197;margin-top:15px}.gamewrap{background:linear-gradient(#dff5ff,#f7fbff);border:2px solid #c4e8f8;border-radius:22px;padding:8px;overflow:hidden}canvas{display:block;width:100%;height:auto;border-radius:15px;touch-action:manipulation}.gamehelp{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:12px 0;color:#68738a;font-size:.92rem}.game-status{font-weight:850;min-height:30px;margin:10px 0}.teasebox{height:170px;position:relative;margin:10px 0 14px;background:linear-gradient(135deg,#fff8d9,#f0f9ff,#fff0f7);border-radius:20px;border:1px dashed #e3d9b7}#revealBtn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;transition:left .15s,top .15s,transform .15s}.final{background:linear-gradient(140deg,#fff0f7,#fff8fb 55%,#ffe0ee)}.final h1{color:#e64d91;font-size:clamp(2.5rem,8vw,4.5rem)}.bigheart{font-size:clamp(3rem,10vw,5rem);animation:heart 1s infinite alternate;display:inline-block}@keyframes heart{to{transform:scale(1.12) rotate(-5deg)}}.confetti{position:fixed;top:-20px;z-index:9;pointer-events:none;animation:fall linear forwards;font-size:22px}@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:.1}}footer{font-size:.78rem;color:#9aa2b2;margin-top:22px}@media(max-width:480px){main{padding:12px}.screen{padding:22px 15px;border-radius:22px}.answers{gap:8px}.answer{font-size:.94rem}.tile{min-width:40px;min-height:42px}}
+.pattern.shapes{gap:6px;flex-wrap:nowrap}.pattern.shapes .tile{min-width:0;padding:8px 3px;font-size:clamp(.85rem,3.5vw,1.55rem);white-space:nowrap}.pattern.statements{direction:rtl;display:grid;gap:8px;max-width:570px;margin:16px auto 22px}.pattern.statements .tile{font-size:1rem;font-weight:750;line-height:1.6;min-height:48px}#game{touch-action:none}#flightBtn{touch-action:manipulation}
+.flight-counts{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:6px 14px}.flight-counts span{white-space:nowrap}
+
+.skip-control{margin-top:15px;min-height:44px;display:flex;align-items:center;justify-content:center}
+.skip-btn{background:#fff0bd;color:var(--ink);border:1px solid #e6d69f;border-radius:999px;padding:9px 20px;min-height:44px;font-size:.9rem;font-weight:750;touch-action:manipulation}
+.skip-control .hint{margin:0}.skip-control [hidden],#laughSoundBtn[hidden]{display:none!important}
+#laughSoundBtn{margin:16px auto 0}
+</style></head><body><main>
+<section class="screen active" id="home"><div class="pills"><span class="pill">🧠 تحدّي الذكاء</span><span class="pill">🎮 لعبة طيران</span><span class="pill">🎁 مفاجأة</span></div><h1>جاهز تعرف جنس المولود؟</h1><p class="sub">قدّامك ألغاز بدها تركيز، وبعدها اختبار طيران صغير. ممنوع الغش أو التخطي… والمفاجأة مش للكسالى! 😏</p><button class="primary" id="startBtn">يلا نبدأ! 🚀</button><footer>تحدّي عائلي صغير — جرّبوا من الموبايل أو الكمبيوتر</footer></section>
+<section class="screen" id="quiz"><div class="topline"><span id="progressLabel">اللغز 1 من 5</span><span id="scoreLabel">ركّز منيح 👀</span></div><div class="track"><span id="progress"></span></div><span class="qnumber" id="qbadge">لغز 1</span><div class="question" id="question"></div><div class="pattern" id="pattern"></div><div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="hint" id="timeoutNote" hidden>ركّز قبل ما تجاوب، لأن مع كل إجابة غلط هتاخد بان. البان بيتضاعف مع كل غلطة، حتى لو في لغز تاني.</div><div class="skip-control"><button type="button" class="skip-btn" id="quizSkipBtn" aria-controls="quizSkipMsg">تخطي</button><span class="hint" id="quizSkipMsg" role="status" hidden>ما في تخطي 😈 — جاوب صح عشان تكمّل.</span></div></section>
+<section class="screen" id="flight"><div class="topline"><span>المرحلة الثانية</span><div class="flight-counts"><span id="obstacleCount">العوائق: 0 / 15</span><span id="coinCount">🪙 الكوينات: 0 / 10</span></div></div><h1>اختبار الطيران 🐤</h1><p class="sub">اضغط أو المس الشاشة حتى تطير الشخصية بين العوائق. لازم تتجاوز <b>15 عائق</b> وتجمع <b>5 كوينات على الأقل من أصل 10</b> من جوّه فتحات العوائق ومن المسافات اللي بينها في نفس المحاولة، بدون اصطدام. إذا خسرت، بتعيد الطيران فقط — الألغاز محفوظة!</p><div class="gamewrap"><canvas id="game" width="640" height="360" aria-label="لعبة الطيران"></canvas></div><div class="game-status" id="gameStatus">اضغط «ابدأ الطيران» لتبدأ.</div><div class="gamehelp"><span>👆 لمسة / نقرة = رفرفة</span><span>🚧 15 عائق + 🪙 5 كوينات للفوز</span></div><button class="primary" id="flightBtn">ابدأ الطيران ✈️</button><div class="skip-control"><button type="button" class="skip-btn" id="flightSkipBtn" aria-controls="flightSkipMsg">تخطي</button><span class="hint" id="flightSkipMsg" role="status" hidden>ما في تخطي 😈 — لازم تكسب.</span></div></section>
+<section class="screen" id="suspense"><div class="pills"><span class="pill">🏁 نجحت!</span><span class="pill">🤫 آخر خطوة</span></div><h1>تهانينا! لقد اقتربت من معرفة جنس المولود</h1><p class="sub">حلّيت الألغاز ونجوت من العوائق… بس مين قال إن المفاجأة رح تنكشف بسهولة؟ 😂</p><div class="teasebox" id="teasebox"><button class="primary" id="revealBtn">اكشف المفاجأة! 🎁</button></div><div class="feedback" id="teaseMsg">قرّبنا… لا تتحمّس كثير 😏</div></section>
+<section class="screen final" id="final"><div class="bigheart">💗</div><h1>إنها بنت! 🎀</h1><p style="font-size:1.25rem;font-weight:800">أميرة صغيرة بالطريق… جهّزوا حالكم للدلع والحب! 👶🏻💕</p><p class="sub">استعدّوا لاستقبال أحلى أميرة في العيلة! 🎀🌸</p><div style="font-size:2rem;margin:15px">🎀 🌷 💕 🧸 💗 🌸</div><button class="primary" onclick="location.reload()">إعادة التحدّي 🔁</button><div><button type="button" class="skip-btn" id="laughSoundBtn" hidden>اسمع ضحكة البيبي 👶 🔊</button></div></section>
+</main>
+<!-- Toddler laughing (2 Years old): datari / freesound, CC0. https://freesound.org/people/datari/sounds/660407/ -->
+<audio id="babyLaugh" preload="auto" src="https://cdn.freesound.org/previews/660/660407_88861-hq.mp3"></audio><script>
+const puzzles=[
+{q:'أي رقم لازم يحلّ محل علامة الاستفهام؟',tiles:['2','6','12','20','30','?'],opts:['36','40','42','44'],a:'42',ex:'الفروق هي 4، 6، 8، 10، ثم 12؛ إذن 30 + 12 = 42.'},
+{q:'أكمل النمط من اليسار لليمين: ركّز في ترتيب الأشكال، وأيّها ممتلئ أو فارغ.',layout:'shapes',tiles:['▲○■','○■△','■△●','△●□','?'],opts:['●□△','□●▲','●□▲','○■▲'],a:'●□▲',ex:'كل مرة ينتقل الشكل الأول إلى نهاية المجموعة ويتبدّل بين الممتلئ والفارغ؛ فتكون المجموعة التالية: ⁦●□▲⁩.'},
+{q:'ما العدد الناقص؟ انتبه إلى العلاقة بين كل عددين متجاورين.',tiles:['3','8','18','38','?'],opts:['58','68','76','78'],a:'78',ex:'كل عدد يساوي العدد السابق × 2 ثم + 2: 3→8→18→38→78.'},
+{q:'أي زوج يكمل التسلسل؟',tiles:['AZ','BY','CX','DW','?'],opts:['EV','EU','FV','EW'],a:'EV',ex:'الحرف الأول يتقدم A, B, C, D, E والثاني يرجع Z, Y, X, W, V.'},
+{q:'قدّامك 3 صناديق، وواحد بس فيه الهدية. عبارة واحدة فقط صحيحة؛ الهدية في أي صندوق؟',layout:'statements',tiles:['🟥 الأحمر: «الهدية هنا»','🟦 الأزرق: «الهدية مش هنا»','🟨 الأصفر: «الهدية مش في الأحمر»'],opts:['الصندوق الأحمر','الصندوق الأزرق','الصندوق الأصفر','لا يمكن تحديده'],a:'الصندوق الأزرق',ex:'لو الهدية في الأزرق، عبارة الأصفر وحدها صحيحة. أمّا لو كانت في الأحمر أو الأصفر، فهتبقى عبارتان صحيحتان.'}];let qi=0,locked=false;
+// One mistake counter for the entire quiz; flight collisions never use it.
+let wrongAnswers=0,banUntil=0,banTimer=null;
+const $=id=>document.getElementById(id);
+// These buttons reveal a joke only; they never advance the game.
+function resetFakeSkip(stage){
+  $(stage+'SkipBtn').hidden=false;
+  $(stage+'SkipMsg').hidden=true;
+}
+['quiz','flight'].forEach(stage=>{
+  $(stage+'SkipBtn').onclick=()=>{
+    $(stage+'SkipBtn').hidden=true;
+    $(stage+'SkipMsg').hidden=false;
+  };
+});
+function playBabyLaugh(){
+  const sound=$('babyLaugh');
+  $('laughSoundBtn').hidden=true;
+  try{
+    sound.volume=.75;
+    sound.currentTime=0;
+    const playback=sound.play();
+    if(playback&&typeof playback.catch==='function'){
+      playback.catch(()=>{$('laughSoundBtn').hidden=false;});
+    }
+  }catch(error){$('laughSoundBtn').hidden=false;}
+}
+$('laughSoundBtn').onclick=playBabyLaugh;
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));$(id).classList.add('active');window.scrollTo(0,0)}$('startBtn').onclick=()=>{qi=0;resetQuizPenalty();renderPuzzle();show('quiz')};function renderPuzzle(){resetFakeSkip('quiz');locked=false;const p=puzzles[qi];$('progressLabel').textContent=`اللغز ${qi+1} من ${puzzles.length}`;$('scoreLabel').textContent=qi<2?'الإحماء خلص تقريبًا 😏':qi<4?'بدها تركيز 🧠':'اللغز الأخير — شدّ حيلك!';$('progress').style.width=`${qi/puzzles.length*100}%`;$('qbadge').textContent=`لغز ${qi+1}`;$('question').textContent=p.q;$('pattern').className='pattern'+(p.layout?' '+p.layout:'');$('pattern').innerHTML='';p.tiles.forEach(t=>{const el=document.createElement('div');el.className='tile'+(t==='?'?' blank':'');el.textContent=t;$('pattern').appendChild(el)});$('answers').innerHTML='';$('feedback').textContent='';$('feedback').className='feedback';p.opts.forEach(opt=>{const b=document.createElement('button');b.className='answer';if(p.layout==='shapes')b.dir='ltr';b.textContent=opt;b.onclick=()=>choose(b,opt);$('answers').appendChild(b)});$('timeoutNote').hidden=wrongAnswers===0;if(banUntil>0)updateQuizBan()}function resetQuizPenalty(){
+  clearTimeout(banTimer);
+  banTimer=null;wrongAnswers=0;banUntil=0;locked=false;
+  $('timeoutNote').hidden=true;
+}
+function updateQuizBan(){
+  clearTimeout(banTimer);
+  banTimer=null;
+  const remainingMs=Math.max(0,banUntil-Date.now());
+  if(remainingMs>0){
+    locked=true;
+    [...$('answers').children].forEach(b=>b.disabled=true);
+    $('feedback').className='feedback bad';
+    $('feedback').textContent=`⏳ إجابة غلط! استنى ${Math.ceil(remainingMs/1000)} ثانية قبل ما تحاول تاني.`;
+    banTimer=setTimeout(updateQuizBan,Math.min(1000,remainingMs));
+    return;
+  }
+  banUntil=0;locked=false;
+  [...$('answers').children].forEach(b=>{b.disabled=false;b.classList.remove('wrong')});
+  $('feedback').className='feedback';
+  $('feedback').textContent='انتهى البان. ركّز واختار إجابتك 👀';
+}
+function startQuizBan(btn){
+  wrongAnswers++;
+  banUntil=Date.now()+15000*Math.pow(2,wrongAnswers-1);
+  btn.classList.add('wrong');
+  $('timeoutNote').hidden=false;
+  updateQuizBan();
+}
+// Recompute from the deadline when returning from a background tab.
+document.addEventListener('visibilitychange',()=>{
+  if(!document.hidden&&banUntil>0)updateQuizBan();
+});
+function choose(btn,opt){
+  if(locked||Date.now()<banUntil)return;
+  const p=puzzles[qi];
+  if(opt===p.a){
+    locked=true;btn.classList.add('correct');
+    $('feedback').textContent='إجابة صحيحة! '+p.ex;
+    $('feedback').className='feedback good';
+    $('progress').style.width=`${(qi+1)/puzzles.length*100}%`;
+    [...$('answers').children].forEach(b=>b.disabled=true);
+    setTimeout(()=>{qi++;if(qi<puzzles.length)renderPuzzle();else startFlightStage()},1500);
+  }else{
+    startQuizBan(btn);
+  }
+}
+function startFlightStage(){resetFakeSkip('flight');show('flight');resetGame()}const canvas=$('game'),ctx=canvas.getContext('2d'),W=640,H=360,goal=15,coinGoal=5;
+const coinRadius=14;
+// Five coins between obstacles and five inside the openings.
+// Small vertical offsets add variety without changing flight physics.
+const coinPlan={
+  2:{kind:'between',shift:14},
+  3:{kind:'gap',shift:-18},
+  5:{kind:'gap',shift:18},
+  6:{kind:'between',shift:-14},
+  7:{kind:'gap',shift:18},
+  10:{kind:'between',shift:14},
+  11:{kind:'gap',shift:-18},
+  12:{kind:'between',shift:14},
+  14:{kind:'between',shift:-14},
+  15:{kind:'gap',shift:18}
+};
+const totalCoins=Object.keys(coinPlan).length;
+// Keep the simulation at 60 updates per second on every refresh rate.
+const stepMs=1000/60;
+let bird,pipes,frames,passed,running,gameOver,raf,started,flightSettings,lastTime=null,accumulator=0;
+let spawnedPipes=0,collectedCoins=0,flightResult=null;
+function getFlightSettings(){
+  const touchOrSmall=window.matchMedia('(pointer: coarse), (max-width: 600px)').matches;
+  return touchOrSmall
+    ? {gap:145,speed:2.4,gravity:.305,lift:-5.05,startLift:-4.2,spawnEvery:107}
+    : {gap:126,speed:2.65,gravity:.34,lift:-5.4,startLift:-4.5,spawnEvery:96};
+}
+function resetGame(){cancelAnimationFrame(raf);flightSettings=getFlightSettings();lastTime=null;accumulator=0;bird={x:115,y:165,vy:0};pipes=[];frames=0;passed=0;spawnedPipes=0;collectedCoins=0;flightResult=null;running=false;gameOver=false;started=false;$('obstacleCount').textContent=`العوائق: 0 / ${goal}`;$('coinCount').textContent=`🪙 الكوينات: 0 / ${totalCoins}`;$('gameStatus').textContent='اضغط «ابدأ الطيران» لتبدأ التحدّي.';$('flightBtn').textContent='ابدأ الطيران ✈️';drawGame()}function drawGame(){ctx.clearRect(0,0,W,H);let sky=ctx.createLinearGradient(0,0,0,H);sky.addColorStop(0,'#c8efff');sky.addColorStop(1,'#f7fcff');ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);ctx.fillStyle='#ffffff99';[[75,55,22],[100,58,17],[88,48,17],[420,76,20],[445,75,15],[432,65,16]].forEach(([x,y,r])=>{ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill()});ctx.fillStyle='#b9e8b6';ctx.beginPath();ctx.moveTo(0,H-35);ctx.quadraticCurveTo(160,H-90,310,H-35);ctx.quadraticCurveTo(480,H-5,640,H-50);ctx.lineTo(640,H);ctx.lineTo(0,H);ctx.fill();ctx.fillStyle='#80c8a0';ctx.fillRect(0,H-15,W,15);pipes.forEach(p=>{ctx.fillStyle='#67bf98';ctx.fillRect(p.x,0,54,p.top);ctx.fillRect(p.x,p.top-12,54,12);ctx.fillRect(p.x,p.bottom,54,H-p.bottom-15);ctx.fillRect(p.x,p.bottom,54,12)});pipes.forEach(p=>{if(p.coin&&!p.coin.collected)drawCoin(p.x+p.coin.offsetX,p.coin.y)});ctx.save();ctx.translate(bird.x,bird.y);ctx.rotate(Math.max(-.45,Math.min(.65,bird.vy*.035)));ctx.fillStyle='#ffd65c';ctx.beginPath();ctx.ellipse(0,0,17,13,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(7,-5,5,0,Math.PI*2);ctx.fill();ctx.fillStyle='#26334a';ctx.beginPath();ctx.arc(9,-5,2,0,Math.PI*2);ctx.fill();ctx.fillStyle='#f39a65';ctx.beginPath();ctx.moveTo(14,1);ctx.lineTo(25,5);ctx.lineTo(14,8);ctx.fill();ctx.fillStyle='#f7b942';ctx.beginPath();ctx.ellipse(-4,5,8,4,-.4,0,Math.PI*2);ctx.fill();ctx.restore();if(!started&&!gameOver){ctx.fillStyle='#26334a';ctx.font='bold 21px system-ui';ctx.textAlign='center';ctx.fillText('مستعد؟',W/2,H/2+65)}if(gameOver){ctx.fillStyle='#26334acc';ctx.fillRect(0,0,W,H);ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='bold 27px system-ui';ctx.fillText(flightResult==='won'?'ممتاز! نجحت!':flightResult==='coins'?'ناقصك كوينات! حاول مرة ثانية':'اصطدمت! حاول مرة ثانية',W/2,H/2);ctx.font='18px system-ui';ctx.fillText(flightResult==='won'?'عدّيت العوائق وجمعت الكوينات المطلوبة':flightResult==='coins'?`جمعت ${collectedCoins} من ${coinGoal} — ألغازك محفوظة`:'تقدّمك في الألغاز محفوظ',W/2,H/2+34)}}function drawCoin(x,y){
+  ctx.save();
+  ctx.fillStyle='#fff2a077';ctx.beginPath();ctx.arc(x,y,coinRadius+5,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#ffd65c';ctx.strokeStyle='#d99924';ctx.lineWidth=2;
+  ctx.beginPath();ctx.arc(x,y,coinRadius,0,Math.PI*2);ctx.fill();ctx.stroke();
+  ctx.strokeStyle='#fff3b0';ctx.lineWidth=1.5;
+  ctx.beginPath();ctx.arc(x,y,coinRadius-4,0,Math.PI*2);ctx.stroke();
+  ctx.fillStyle='#a96e13';ctx.font='bold 16px system-ui';ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillText('★',x,y+1);
+  ctx.restore();
+}
+function spawnPipe(){
+  if(spawnedPipes>=goal)return;
+  const gap=flightSettings.gap,top=45+Math.random()*(H-15-gap-90);
+  spawnedPipes++;
+  const plan=coinPlan[spawnedPipes],previous=pipes[pipes.length-1];
+  let coin=null;
+  if(plan){
+    const between=plan.kind==='between';
+    const center=top+gap/2;
+    const previousCenter=previous?(previous.top+previous.bottom)/2:center;
+    // A negative offset places the coin in the free space before this pipe.
+    const offsetX=between?27-flightSettings.speed*flightSettings.spawnEvery/2:27;
+    const y=(between?(previousCenter+center)/2:center)+plan.shift;
+    coin={offsetX,y,kind:plan.kind,collected:false};
+  }
+  pipes.push({x:W+10,top,bottom:top+gap,done:false,number:spawnedPipes,coin});
+}function updateGame(){
+  frames++;
+  bird.vy+=flightSettings.gravity;
+  bird.y+=bird.vy;
+  if(bird.y<8||bird.y>H-22){endFlight();return}
+  if(frames%flightSettings.spawnEvery===0)spawnPipe();
+  for(const p of pipes){
+    p.x-=flightSettings.speed;
+    if(bird.x+10>p.x&&bird.x-10<p.x+54&&(bird.y-10<p.top||bird.y+10>p.bottom)){endFlight();return}
+    if(p.coin&&!p.coin.collected&&Math.hypot(bird.x-(p.x+p.coin.offsetX),bird.y-p.coin.y)<=coinRadius+16){
+      p.coin.collected=true;collectedCoins++;
+      $('coinCount').textContent=`🪙 الكوينات: ${collectedCoins} / ${totalCoins}`;
+    }
+    if(!p.done&&p.x+54<bird.x-10){
+      p.done=true;passed++;
+      $('obstacleCount').textContent=`العوائق: ${Math.min(passed,goal)} / ${goal}`;
+      if(passed>=goal){if(collectedCoins>=coinGoal)winFlight();else endFlight('coins');return}
+    }
+  }
+  pipes=pipes.filter(p=>p.x>-70);
+}
+function frame(now){
+  if(!running)return;
+  if(lastTime===null)lastTime=now;
+  accumulator+=Math.min(Math.max(now-lastTime,0),50);
+  lastTime=now;
+  while(accumulator>=stepMs&&running){updateGame();accumulator-=stepMs}
+  drawGame();
+  if(running)raf=requestAnimationFrame(frame);
+}
+function endFlight(reason='collision'){
+  if(!running)return;
+  running=false;gameOver=true;flightResult=reason;
+  $('gameStatus').textContent=reason==='coins'
+    ? `عدّيت ${goal} عائق، لكن جمعت ${collectedCoins} من ${coinGoal} كوينات. جرّب الطيران تاني — الألغاز محفوظة!`
+    : 'أوف! اصطدمت 😅 جرّب من جديد، ألغازك ما راحت.';
+  $('flightBtn').textContent='أعد الطيران 🔁';
+  drawGame();
+}
+function winFlight(){
+  if(!running||passed<goal||collectedCoins<coinGoal)return;
+  running=false;gameOver=true;flightResult='won';
+  $('obstacleCount').textContent=`العوائق: ${goal} / ${goal}`;
+  $('coinCount').textContent=`🪙 الكوينات: ${collectedCoins} / ${totalCoins}`;
+  $('gameStatus').textContent='جمعت الكوينات المطلوبة وعدّيت العوائق! بقيت آخر مفاجأة 🎁';
+  $('flightBtn').textContent='كمّل للمفاجأة 🎉';
+  drawGame();
+}
+function flap(){if(running)bird.vy=flightSettings.lift}$('flightBtn').onclick=()=>{if(flightResult==='won'){startTease();return}if(!running){resetGame();started=true;running=true;$('gameStatus').textContent='يلا! اضغط/المس حتى ترفرف وتجمع الكوينات 🐤🪙';$('flightBtn').textContent='رفرف! 👆';bird.vy=flightSettings.startLift;raf=requestAnimationFrame(frame)}else flap()};canvas.addEventListener('pointerdown',e=>{e.preventDefault();if(running)flap();else if(!started&&!gameOver)$('flightBtn').click()});
+function startTease(){show('suspense');setupEscape()}let escapes=0;const lines=['قريبة... بس مش لهالدرجة 😂','لسه مستعجل؟ 😏','المفاجأة مش لأي حدا بسهولة!','جرّب مرة ثانية... إذا بتقدر 😂','يا سلام عليك، قربت تمسكها!','آخر محاولة... يمكن! 🤭'];function setupEscape(){escapes=0;const box=$('teasebox'),btn=$('revealBtn');btn.style.left='50%';btn.style.top='50%';btn.style.transform='translate(-50%,-50%)';$('teaseMsg').textContent='قرّبنا… لا تتحمّس كثير 😏';function dodge(){if(escapes>=6)return;escapes++;let maxX=Math.max(5,box.clientWidth-btn.offsetWidth-8),maxY=Math.max(5,box.clientHeight-btn.offsetHeight-8);btn.style.transform='none';btn.style.left=(5+Math.random()*maxX)+'px';btn.style.top=(5+Math.random()*maxY)+'px';$('teaseMsg').textContent=lines[Math.min(escapes-1,lines.length-1)];if(escapes>=6){$('teaseMsg').textContent='طيب طيب… استاهلت تعرف! اضغطها بسرعة 😄';btn.style.transition='none'}}btn.onpointerenter=dodge;btn.onclick=()=>{if(escapes<6){dodge();return}show('final');playBabyLaugh();confetti()};btn.ontouchstart=e=>{if(escapes<6){e.preventDefault();dodge()}}}function confetti(){const bits=['💗','🎀','🌸','💕','✨','🎉'];for(let i=0;i<34;i++){let el=document.createElement('span');el.className='confetti';el.textContent=bits[Math.floor(Math.random()*bits.length)];el.style.left=Math.random()*100+'vw';el.style.animationDuration=(3+Math.random()*4)+'s';el.style.animationDelay=(Math.random()*1.5)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),8500)}}
+</script></body></html>
